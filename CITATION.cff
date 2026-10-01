@@ -3,9 +3,16 @@ message: "If you use these resources, please cite the manuscript (when published
 title: "Fetal umbilical circulation: anatomy atlas, umbilical geometry and viewers, and 1-D solver"
 type: software
 authors:
+  - family-names: Tang
+    given-names: Jing
+    affiliation: "Department of Ultrasound, Chongqing Health Center for Women and Children, Chongqing, China"
+  - family-names: Peng
+    given-names: Liqing
+    affiliation: "Department of Radiology, Sichuan University, Chengdu, China"
   - family-names: Ho
     given-names: Harvey
     orcid: "https://orcid.org/0000-0002-4160-0737"
+    affiliation: "Rātā BioSim Lab, Auckland, New Zealand"
 repository-code: "https://github.com/hwe001/fetal-umbilical-circulation"
 license: MIT
 abstract: "Companion repository for the manuscript 'Anatomy-Informed Modeling of the Fetal Umbilical Circulation Across Gestation'. A Zenodo DOI will be added after acceptance."
