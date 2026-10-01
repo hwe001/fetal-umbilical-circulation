@@ -1,0 +1,18 @@
+{
+  "ga": 25,
+  "cord_median_cm": 36.4,
+  "L_UA_cm": 42.5,
+  "R_total": 1683.2697748414942,
+  "dp_inlet": 6907.2838958025495,
+  "PI": 1.1473402282657672,
+  "RI": 0.6781060150034008,
+  "PI_target": 1.14,
+  "RI_target": 0.7,
+  "mean_PSV": 17.96067883185076,
+  "centreline_PSV": 35.003138097049366,
+  "flow_mL_min": 53.30007145155118,
+  "converged": true,
+  "on_target": true,
+  "radius_cm": 0.11539648303098456,
+  "calls": 45
+}

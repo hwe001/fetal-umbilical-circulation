@@ -1,0 +1,43 @@
+{
+ "cohort": {
+  "n": 1194,
+  "pearson_PI_RI": 0.9572495902549154,
+  "spearman_PI_RI": 0.9703197008040552
+ },
+ "bands": [
+  {
+   "ga": 22.0,
+   "RI_target": 0.72,
+   "split_fraction": 0.7434877981082992,
+   "PI_reference": 1.2889428052979897,
+   "PI_range_over_admissible_shape": [
+    1.2779297965878775,
+    1.3453597127125225
+   ],
+   "PI_relative_spread": 0.052314125845992
+  },
+  {
+   "ga": 26.0,
+   "RI_target": 0.7,
+   "split_fraction": 0.7483412707145133,
+   "PI_reference": 1.2194021053177913,
+   "PI_range_over_admissible_shape": [
+    1.1687281293307588,
+    1.2609449076970831
+   ],
+   "PI_relative_spread": 0.07562458516691795
+  },
+  {
+   "ga": 30.0,
+   "RI_target": 0.63,
+   "split_fraction": 0.8370338905943858,
+   "PI_reference": 1.005986253367314,
+   "PI_range_over_admissible_shape": [
+    0.9352646001519247,
+    1.0987968301148134
+   ],
+   "PI_relative_spread": 0.1625591099436013
+  }
+ ],
+ "statement": "Given the RI fit, per-band model PI moves only within the reported range when the pinned shape parameters sweep their admissible ranges; the PI agreement in 3.5 is therefore a consistency check of the GA-trend of the resistance split under the geometry convention, not an independent out-of-sample validation."
+}

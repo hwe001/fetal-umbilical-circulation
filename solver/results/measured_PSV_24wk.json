@@ -1,0 +1,12 @@
+{
+  "n_frames": 20,
+  "n_women": 8,
+  "frame_median": 30.2,
+  "frame_q1": 25.787499999999998,
+  "frame_q3": 40.9425,
+  "woman_median": 32.089999999999996,
+  "woman_q1": 28.1125,
+  "woman_q3": 40.4825,
+  "woman_min": 25.18,
+  "woman_max": 45.91
+}

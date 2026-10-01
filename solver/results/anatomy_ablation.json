@@ -1,0 +1,644 @@
+{
+  "meta": {
+    "date": "2026-09-13",
+    "purpose": "Anatomy ablation: does MR-derived UA length change calibrated/held-out predictions?",
+    "provenance_caveat": "The 72.2 cm reference path is derived from ONE approximately 34-week specimen; it is not a patient-specific length known at the 19-29-week calibration points.",
+    "length_construction": "L_UA = L_cord * sqrt(1+(2*pi*r*CI)^2), r=0.482 cm (specimen offset); CI from van Dijk 2002 (mean 0.17, 10-90th 0.07-0.30); single-axis variations only -- cord-length and coiling-index correlation not modeled",
+    "procedure": "fit_ga_targets.calibrate, dx=0.73 cm, max_nfev=18, index_definition=minimum, warm-started from the 72.2 cm Table-I fits; held-out/production at dx=0.25 cm",
+    "held_out_refs": {
+      "pilot_24wk": {
+        "PI": 1.04,
+        "RI": 0.66,
+        "S_D": 2.96
+      },
+      "ozawa_24wk_mL_min_interp": 82.2
+    }
+  },
+  "scenarios": [
+    {
+      "name": "reference_72",
+      "cord_cm": 61.78,
+      "ci": 0.2,
+      "note": "MR-derived specimen length (one ~34-week specimen)",
+      "L_cm": 72.23
+    },
+    {
+      "name": "ci_low_010",
+      "cord_cm": 61.78,
+      "ci": 0.1,
+      "note": "coiling near 10th percentile (van Dijk), same cord",
+      "L_cm": 64.55
+    },
+    {
+      "name": "ci_high_030",
+      "cord_cm": 61.78,
+      "ci": 0.3,
+      "note": "coiling near 90th percentile (van Dijk), same cord",
+      "L_cm": 83.47
+    },
+    {
+      "name": "cord_short_45",
+      "cord_cm": 45.0,
+      "ci": 0.2,
+      "note": "short-cord scenario, same coiling",
+      "L_cm": 52.61
+    },
+    {
+      "name": "cord_long_75",
+      "cord_cm": 75.0,
+      "ci": 0.2,
+      "note": "long-cord scenario, same coiling",
+      "L_cm": 87.68
+    }
+  ],
+  "table_I_reference": [
+    {
+      "ga_weeks": 19,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 17237.98661223165,
+      "dp_inlet_dyn_cm2": 40978.023309686476,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 5.748537754221488,
+        "EDV_cm_s": 1.1956700813890788,
+        "TAV_cm_s": 3.5667720592003787,
+        "PI": 1.2764672362755638,
+        "RI": 0.7920044831381636,
+        "S_D": 4.807795932756869,
+        "mean_flow_mL_s_per_artery": 0.05236830451207395,
+        "total_two_UA_flow_mL_min": 6.284196541448874,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": false,
+      "optimizer_message": "The maximum number of function evaluations is exceeded.",
+      "cost": 3.809911997166652,
+      "nfev": 18,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.295,
+        "RI": 0.74
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 5.417775208015236,
+          "EDV_cm_s": 1.1454111798996713,
+          "TAV_cm_s": 3.3734088690426867,
+          "PI": 1.2664827164363226,
+          "RI": 0.7885827418226743,
+          "S_D": 4.729982824586878,
+          "mean_flow_mL_s_per_artery": 0.049523495527010894,
+          "total_two_UA_flow_mL_min": 5.942819463241308,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    },
+    {
+      "ga_weeks": 23,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 7863.825308741737,
+      "dp_inlet_dyn_cm2": 16004.22162429592,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 8.461033051654788,
+        "EDV_cm_s": 2.2406680088874382,
+        "TAV_cm_s": 5.265020706869024,
+        "PI": 1.1814512020155845,
+        "RI": 0.7351779628789875,
+        "S_D": 3.776120789913877,
+        "mean_flow_mL_s_per_artery": 0.15572962807750798,
+        "total_two_UA_flow_mL_min": 18.68755536930096,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": true,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "cost": 0.8837647021425254,
+      "nfev": 17,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.19,
+        "RI": 0.71
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 8.179735990468888,
+          "EDV_cm_s": 2.189227379908885,
+          "TAV_cm_s": 5.106094237188465,
+          "PI": 1.1732076088471326,
+          "RI": 0.7323596528714624,
+          "S_D": 3.7363574316384285,
+          "mean_flow_mL_s_per_artery": 0.15101309031046342,
+          "total_two_UA_flow_mL_min": 18.12157083725561,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    },
+    {
+      "ga_weeks": 25,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 4683.854041708923,
+      "dp_inlet_dyn_cm2": 11085.109338410715,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 11.23359609524084,
+        "EDV_cm_s": 3.351747344368221,
+        "TAV_cm_s": 6.9171677297880425,
+        "PI": 1.1394618518400648,
+        "RI": 0.7016318446959116,
+        "S_D": 3.351564107036918,
+        "mean_flow_mL_s_per_artery": 0.2899272728815331,
+        "total_two_UA_flow_mL_min": 34.79127274578397,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": false,
+      "optimizer_message": "The maximum number of function evaluations is exceeded.",
+      "cost": 0.0036906506920204927,
+      "nfev": 18,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.14,
+        "RI": 0.7
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 10.957751941943952,
+          "EDV_cm_s": 3.3027863514350777,
+          "TAV_cm_s": 6.762862596395528,
+          "PI": 1.1319120389328654,
+          "RI": 0.6985890565023003,
+          "S_D": 3.317729570119712,
+          "mean_flow_mL_s_per_artery": 0.28343368378633066,
+          "total_two_UA_flow_mL_min": 34.01204205435968,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    },
+    {
+      "ga_weeks": 29,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 1199.4229013381528,
+      "dp_inlet_dyn_cm2": 6223.9391114055215,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 18.263370787695003,
+        "EDV_cm_s": 7.016987202546901,
+        "TAV_cm_s": 11.645928309874206,
+        "PI": 0.9656923248971623,
+        "RI": 0.6157890411295479,
+        "S_D": 2.6027367957955074,
+        "mean_flow_mL_s_per_artery": 0.9304382067653489,
+        "total_two_UA_flow_mL_min": 111.65258481184188,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": false,
+      "optimizer_message": "The maximum number of function evaluations is exceeded.",
+      "cost": 0.2929423934406688,
+      "nfev": 18,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 0.96,
+        "RI": 0.63
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 18.050773046212143,
+          "EDV_cm_s": 6.853867398636019,
+          "TAV_cm_s": 11.493616994183244,
+          "PI": 0.974184684703059,
+          "RI": 0.6203006164284878,
+          "S_D": 2.6336624268226156,
+          "mean_flow_mL_s_per_artery": 0.9182236057920123,
+          "total_two_UA_flow_mL_min": 110.18683269504149,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    }
+  ],
+  "fixed_parameter_arm": {
+    "description": "GA=25 Table-I production fit held fixed; only L varies",
+    "R_total": 4683.854041708923,
+    "dp_inlet": 11085.109338410715,
+    "p0": 30000.0,
+    "scenarios": [
+      {
+        "name": "reference_72",
+        "L_cm": 72.23,
+        "note": "MR-derived specimen length (one ~34-week specimen)",
+        "metrics": {
+          "PI": 1.1312,
+          "RI": 0.6984,
+          "S_D": 3.3153,
+          "total_two_UA_flow_mL_min": 34.0,
+          "converged": true,
+          "cycles": 15,
+          "fallback": 0.0
+        }
+      },
+      {
+        "name": "ci_low_010",
+        "L_cm": 64.55,
+        "note": "coiling near 10th percentile (van Dijk), same cord",
+        "metrics": {
+          "PI": 1.3301,
+          "RI": 0.7591,
+          "S_D": 4.1507,
+          "total_two_UA_flow_mL_min": 37.3,
+          "converged": true,
+          "cycles": 15,
+          "fallback": 0.0
+        }
+      },
+      {
+        "name": "ci_high_030",
+        "L_cm": 83.47,
+        "note": "coiling near 90th percentile (van Dijk), same cord",
+        "metrics": {
+          "PI": 0.8758,
+          "RI": 0.6017,
+          "S_D": 2.5104,
+          "total_two_UA_flow_mL_min": 30.1,
+          "converged": true,
+          "cycles": 15,
+          "fallback": 0.0
+        }
+      },
+      {
+        "name": "cord_short_45",
+        "L_cm": 52.61,
+        "note": "short-cord scenario, same coiling",
+        "metrics": {
+          "PI": 1.6408,
+          "RI": 0.8321,
+          "S_D": 5.9563,
+          "total_two_UA_flow_mL_min": 43.92,
+          "converged": true,
+          "cycles": 15,
+          "fallback": 0.0
+        }
+      },
+      {
+        "name": "cord_long_75",
+        "L_cm": 87.68,
+        "note": "long-cord scenario, same coiling",
+        "metrics": {
+          "PI": 0.7956,
+          "RI": 0.5655,
+          "S_D": 2.3013,
+          "total_two_UA_flow_mL_min": 28.86,
+          "converged": true,
+          "cycles": 15,
+          "fallback": 0.0
+        }
+      }
+    ]
+  },
+  "refit_arm": {
+    "description": "recalibrated per length scenario (Table-I procedure), held-out comparison at 24 wk",
+    "scenarios": [
+      {
+        "name": "reference_72",
+        "L_cm": 72.23,
+        "note": "MR-derived specimen length (one ~34-week specimen)",
+        "fits": [
+          {
+            "ga_weeks": 19,
+            "R_total": 10976.2,
+            "dp_inlet": 41286.8,
+            "PI_sim": 1.2764,
+            "RI_sim": 0.7919,
+            "PI_tgt": 1.295,
+            "RI_tgt": 0.74,
+            "optimizer_success": true,
+            "cost": 3.8035
+          },
+          {
+            "ga_weeks": 23,
+            "R_total": 7863.8,
+            "dp_inlet": 16004.4,
+            "PI_sim": 1.1805,
+            "RI_sim": 0.7349,
+            "PI_tgt": 1.19,
+            "RI_tgt": 0.71,
+            "optimizer_success": true,
+            "cost": 0.8845
+          },
+          {
+            "ga_weeks": 25,
+            "R_total": 4377.2,
+            "dp_inlet": 11107.8,
+            "PI_sim": 1.1394,
+            "RI_sim": 0.7017,
+            "PI_tgt": 1.14,
+            "RI_tgt": 0.7,
+            "optimizer_success": false,
+            "cost": 0.0041
+          },
+          {
+            "ga_weeks": 29,
+            "R_total": 1023.6,
+            "dp_inlet": 6197.1,
+            "PI_sim": 0.9656,
+            "RI_sim": 0.6159,
+            "PI_tgt": 0.96,
+            "RI_tgt": 0.63,
+            "optimizer_success": true,
+            "cost": 0.2887
+          }
+        ],
+        "held_out_24wk": {
+          "R_total_interp": 6120.5,
+          "dp_inlet_interp": 13556.1,
+          "PI": 1.1724,
+          "RI": 0.724,
+          "S_D": 3.6237,
+          "total_two_UA_flow_mL_min": 24.9,
+          "pct_error_PI": 12.7,
+          "pct_error_RI": 9.7,
+          "pct_error_SD": 22.4,
+          "flow_pct_error_vs_Ozawa24": -69.7,
+          "converged": true,
+          "cycles": 15
+        }
+      },
+      {
+        "name": "ci_low_010",
+        "L_cm": 64.55,
+        "note": "coiling near 10th percentile (van Dijk), same cord",
+        "fits": [
+          {
+            "ga_weeks": 19,
+            "R_total": 5618.6,
+            "dp_inlet": 27993.2,
+            "PI_sim": 1.2791,
+            "RI_sim": 0.7867,
+            "PI_tgt": 1.295,
+            "RI_tgt": 0.74,
+            "optimizer_success": false,
+            "cost": 3.0388
+          },
+          {
+            "ga_weeks": 23,
+            "R_total": 4928.0,
+            "dp_inlet": 13114.7,
+            "PI_sim": 1.1841,
+            "RI_sim": 0.7279,
+            "PI_tgt": 1.19,
+            "RI_tgt": 0.71,
+            "optimizer_success": false,
+            "cost": 0.4416
+          },
+          {
+            "ga_weeks": 25,
+            "R_total": 4067.6,
+            "dp_inlet": 9498.5,
+            "PI_sim": 1.1417,
+            "RI_sim": 0.695,
+            "PI_tgt": 1.14,
+            "RI_tgt": 0.7,
+            "optimizer_success": true,
+            "cost": 0.0346
+          },
+          {
+            "ga_weeks": 29,
+            "R_total": 845.2,
+            "dp_inlet": 5798.7,
+            "PI_sim": 0.9668,
+            "RI_sim": 0.6128,
+            "PI_tgt": 0.96,
+            "RI_tgt": 0.63,
+            "optimizer_success": true,
+            "cost": 0.4252
+          }
+        ],
+        "held_out_24wk": {
+          "R_total_interp": 4497.8,
+          "dp_inlet_interp": 11306.6,
+          "PI": 1.1766,
+          "RI": 0.7162,
+          "S_D": 3.5233,
+          "total_two_UA_flow_mL_min": 27.34,
+          "pct_error_PI": 13.1,
+          "pct_error_RI": 8.5,
+          "pct_error_SD": 19.0,
+          "flow_pct_error_vs_Ozawa24": -66.7,
+          "converged": true,
+          "cycles": 15
+        }
+      },
+      {
+        "name": "ci_high_030",
+        "L_cm": 83.47,
+        "note": "coiling near 90th percentile (van Dijk), same cord",
+        "fits": [
+          {
+            "ga_weeks": 19,
+            "R_total": 62922.2,
+            "dp_inlet": 89492.9,
+            "PI_sim": 1.0846,
+            "RI_sim": 0.7201,
+            "PI_tgt": 1.295,
+            "RI_tgt": 0.74,
+            "optimizer_success": true,
+            "cost": 55.8178
+          },
+          {
+            "ga_weeks": 23,
+            "R_total": 5611.1,
+            "dp_inlet": 22441.3,
+            "PI_sim": 1.1781,
+            "RI_sim": 0.7439,
+            "PI_tgt": 1.19,
+            "RI_tgt": 0.71,
+            "optimizer_success": false,
+            "cost": 1.6158
+          },
+          {
+            "ga_weeks": 25,
+            "R_total": 5288.0,
+            "dp_inlet": 14380.2,
+            "PI_sim": 1.1358,
+            "RI_sim": 0.7112,
+            "PI_tgt": 1.14,
+            "RI_tgt": 0.7,
+            "optimizer_success": true,
+            "cost": 0.1803
+          },
+          {
+            "ga_weeks": 29,
+            "R_total": 892.7,
+            "dp_inlet": 6887.6,
+            "PI_sim": 0.9642,
+            "RI_sim": 0.6199,
+            "PI_tgt": 0.96,
+            "RI_tgt": 0.63,
+            "optimizer_success": true,
+            "cost": 0.1501
+          }
+        ],
+        "held_out_24wk": {
+          "R_total_interp": 5449.6,
+          "dp_inlet_interp": 18410.8,
+          "PI": 1.1823,
+          "RI": 0.7389,
+          "S_D": 3.8296,
+          "total_two_UA_flow_mL_min": 22.81,
+          "pct_error_PI": 13.7,
+          "pct_error_RI": 12.0,
+          "pct_error_SD": 29.4,
+          "flow_pct_error_vs_Ozawa24": -72.2,
+          "converged": true,
+          "cycles": 15
+        }
+      },
+      {
+        "name": "cord_short_45",
+        "L_cm": 52.61,
+        "note": "short-cord scenario, same coiling",
+        "fits": [
+          {
+            "ga_weeks": 19,
+            "R_total": 11992.1,
+            "dp_inlet": 41605.0,
+            "PI_sim": 2.6207,
+            "RI_sim": 1.1,
+            "PI_tgt": 1.295,
+            "RI_tgt": 0.74,
+            "optimizer_success": false,
+            "cost": 2358.8292
+          },
+          {
+            "ga_weeks": 23,
+            "R_total": 11409.8,
+            "dp_inlet": 9497.9,
+            "PI_sim": 1.1886,
+            "RI_sim": 0.7129,
+            "PI_tgt": 1.19,
+            "RI_tgt": 0.71,
+            "optimizer_success": false,
+            "cost": 0.0129
+          },
+          {
+            "ga_weeks": 25,
+            "R_total": 1199.1,
+            "dp_inlet": 7774.9,
+            "PI_sim": 1.1446,
+            "RI_sim": 0.6859,
+            "PI_tgt": 1.14,
+            "RI_tgt": 0.7,
+            "optimizer_success": false,
+            "cost": 0.2761
+          },
+          {
+            "ga_weeks": 29,
+            "R_total": 1001.7,
+            "dp_inlet": 5437.8,
+            "PI_sim": 0.968,
+            "RI_sim": 0.6086,
+            "PI_tgt": 0.96,
+            "RI_tgt": 0.63,
+            "optimizer_success": true,
+            "cost": 0.6529
+          }
+        ],
+        "held_out_24wk": {
+          "R_total_interp": 6304.4,
+          "dp_inlet_interp": 8636.4,
+          "PI": 1.1816,
+          "RI": 0.7028,
+          "S_D": 3.3642,
+          "total_two_UA_flow_mL_min": 31.57,
+          "pct_error_PI": 13.6,
+          "pct_error_RI": 6.5,
+          "pct_error_SD": 13.7,
+          "flow_pct_error_vs_Ozawa24": -61.6,
+          "converged": true,
+          "cycles": 15
+        }
+      },
+      {
+        "name": "cord_long_75",
+        "L_cm": 87.68,
+        "note": "long-cord scenario, same coiling",
+        "fits": [
+          {
+            "ga_weeks": 19,
+            "R_total": 35320.7,
+            "dp_inlet": 81446.8,
+            "PI_sim": 0.9095,
+            "RI_sim": 0.6408,
+            "PI_tgt": 1.295,
+            "RI_tgt": 0.74,
+            "optimizer_success": false,
+            "cost": 198.0784
+          },
+          {
+            "ga_weeks": 23,
+            "R_total": 9297.3,
+            "dp_inlet": 25448.7,
+            "PI_sim": 1.1766,
+            "RI_sim": 0.7462,
+            "PI_tgt": 1.19,
+            "RI_tgt": 0.71,
+            "optimizer_success": true,
+            "cost": 1.8605
+          },
+          {
+            "ga_weeks": 25,
+            "R_total": 6102.8,
+            "dp_inlet": 15873.5,
+            "PI_sim": 1.1344,
+            "RI_sim": 0.7146,
+            "PI_tgt": 1.14,
+            "RI_tgt": 0.7,
+            "optimizer_success": true,
+            "cost": 0.307
+          },
+          {
+            "ga_weeks": 29,
+            "R_total": 758.3,
+            "dp_inlet": 7175.7,
+            "PI_sim": 0.9635,
+            "RI_sim": 0.6211,
+            "PI_tgt": 0.96,
+            "RI_tgt": 0.63,
+            "optimizer_success": true,
+            "cost": 0.1136
+          }
+        ],
+        "held_out_24wk": {
+          "R_total_interp": 7700.0,
+          "dp_inlet_interp": 20661.1,
+          "PI": 1.1877,
+          "RI": 0.7444,
+          "S_D": 3.9121,
+          "total_two_UA_flow_mL_min": 22.01,
+          "pct_error_PI": 14.2,
+          "pct_error_RI": 12.8,
+          "pct_error_SD": 32.2,
+          "flow_pct_error_vs_Ozawa24": -73.2,
+          "converged": true,
+          "cycles": 15
+        }
+      }
+    ]
+  }
+}

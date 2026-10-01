@@ -1,0 +1,45 @@
+{
+  "_description": "Published calibration targets (Table I / Table II of the manuscript) and the ORIGINAL fit that reproduced them at the placeholder L=20cm. These are the numbers any new fit at L=72.2cm must reproduce.",
+
+  "table_I_original_L20cm": {
+    "_columns": ["GA_weeks", "Rtotal_dyn_s_cm5", "dp_inlet_dyn_cm2", "PI_target", "RI_target"],
+    "_note": "compliance C_total fixed at 4e-5 cm^5/dyn for all points; original fit achieved PI within 0.02 and RI within 0.03 of target at every point",
+    "rows": [
+      [11, 25982, 14319, 1.175, 0.705],
+      [19, 17612, 14341, 1.295, 0.740],
+      [23, 8371, 12900, 1.190, 0.710],
+      [25, 5560, 12544, 1.140, 0.700],
+      [29, 4788, 8062, 0.960, 0.630],
+      [33, 3700, 6206, 0.905, 0.600],
+      [37, 5446, 3202, 0.820, 0.570]
+    ]
+  },
+
+  "table_II_original_L20cm": {
+    "_columns": ["GA_weeks", "Rtotal_dyn_s_cm5", "dp_inlet_dyn_cm2", "p0_dyn_cm2", "PI_target", "RI_target", "UV_flow_target_mL_per_min"],
+    "_note": "3-parameter fit (Rtotal, dp_inlet, p0) against 3 targets (PI, RI, absolute UV flow = 2*mean(q_outlet)*60). UV flow target source: Ozawa et al. 2023, Table 2, 50th percentile.",
+    "rows": [
+      [19, 26733, 11223, 25480, 1.295, 0.740, 31.2],
+      [23, 12835, 6712, 17924, 1.190, 0.710, 71.7],
+      [25, 2201, 4537, 8236, 1.140, 0.700, 92.7],
+      [29, 1249, 2330, 4181, 0.960, 0.630, 141.8],
+      [33, 5783, 1586, 10999, 0.905, 0.600, 202.3]
+    ]
+  },
+
+  "growth_curve_r0": {
+    "_description": "PCHIP interpolation, UA mean-of-two-arteries diameter (mm) vs GA (weeks); r0_cm = diameter_mm / 2 / 10. Valid anchored range 12-30 weeks; GA=11,33,37 are extrapolations.",
+    "anchors_GA_weeks": [12.0, 20.0, 30.0],
+    "anchors_diameter_mm": [0.74, 1.545, 3.6]
+  },
+
+  "fixed_params": {
+    "bpm": 140.0,
+    "C_total": 4.0e-5,
+    "p0_default_table_I": 30000.0,
+    "R1_frac": 0.15,
+    "L_ORIGINAL_cm": 20.0,
+    "L_NEW_TARGET_cm": 72.2,
+    "L_NEW_TARGET_source": "this specimen's own reconstructed UA trunk arc length (manuscript Section II-C): real digitized cord centreline (617.8mm) run through the coiling-index helix-length relationship sqrt(1+(2*pi*r/pitch)^2) with r=4.82mm, pitch=50mm/turn -> 722mm trunk, excluding the 170mm placental branch tree which the single non-branching 1D solver does not represent"
+  }
+}

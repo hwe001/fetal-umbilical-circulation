@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fetal Umbilical Geometry Viewer</title>
+<style>
+  :root {
+    --bg: #0c1119;
+    --panel: rgba(18,25,35,0.86);
+    --panel-border: rgba(255,255,255,0.09);
+    --ink: #dde5ec;
+    --muted: #8c9bab;
+    --accent: #3fc7b4;
+    --control-bg: rgba(255,255,255,0.06);
+    --control-bg-active: rgba(63,199,180,0.22);
+  }
+  :root[data-theme="light"] {
+    --bg: #eef2f4; --panel: rgba(255,255,255,0.88); --panel-border: rgba(10,20,30,0.10);
+    --ink: #182430; --muted: #55697a; --control-bg: rgba(10,20,30,0.05);
+    --control-bg-active: rgba(29,148,132,0.16);
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #eef2f4; --panel: rgba(255,255,255,0.88); --panel-border: rgba(10,20,30,0.10);
+      --ink: #182430; --muted: #55697a; --control-bg: rgba(10,20,30,0.05);
+      --control-bg-active: rgba(29,148,132,0.16);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); }
+  body { font-family: -apple-system, "Segoe UI", ui-sans-serif, system-ui, sans-serif; color: var(--ink); }
+  #viewport { position: fixed; inset: 0; cursor: grab; }
+  #viewport.dragging { cursor: grabbing; }
+  .num { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-variant-numeric: tabular-nums; }
+
+  #panel {
+    position: fixed; top: 16px; left: 16px; width: 300px;
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 12px; padding: 16px; backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  #panel h1 { font-size: 14px; font-weight: 650; margin: 0 0 2px; }
+  #panel .sub { font-size: 11.5px; color: var(--muted); margin: 0 0 12px; line-height: 1.45; }
+  #panel .sub a { color: var(--accent); }
+  .row-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 12px 0 6px; }
+  .layer-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px;
+    border-radius: 7px; margin-bottom: 4px; background: var(--control-bg); }
+  .layer-row label { font-size: 12px; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .opacity-slider { width: 70px; accent-color: var(--accent); }
+
+  .slider-row { display: flex; align-items: center; gap: 10px; }
+  .slider-row input[type="range"] { flex: 1; accent-color: var(--accent); }
+  .slider-row .slider-val { font-size: 11.5px; color: var(--muted); white-space: nowrap; min-width: 54px; text-align: right; }
+  .slider-row .slider-val b { color: var(--ink); }
+  .sub-readout { font-size: 10.5px; color: var(--muted); text-align: right; margin-top: 2px; margin-bottom: 4px; }
+  .sub-readout b { color: var(--accent); }
+
+  .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; margin-top: 12px; font-size: 11px; }
+  .meta-grid .k { color: var(--muted); }
+  .meta-grid .v { color: var(--ink); text-align: right; font-weight: 550; }
+  .meta-grid .v.flag { color: #3fc7b4; }
+
+  #hint {
+    position: fixed; right: 16px; bottom: 16px; text-align: right;
+    font-size: 10.5px; color: var(--muted); line-height: 1.6; display: flex; align-items: center; gap: 10px;
+  }
+  #hint kbd { font-family: inherit; background: var(--control-bg); border: 1px solid var(--panel-border);
+    border-radius: 4px; padding: 1px 5px; font-size: 10px; }
+  #theme-toggle { width: 28px; height: 28px; border-radius: 7px; border: 1px solid var(--panel-border);
+    background: var(--control-bg); color: var(--ink); cursor: pointer; font-size: 13px; }
+  #theme-toggle:hover { background: var(--control-bg-active); }
+
+  #note {
+    position: fixed; top: 16px; right: 16px; width: 280px;
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 12px; padding: 12px 14px; backdrop-filter: blur(10px);
+    font-size: 10.5px; line-height: 1.5; color: var(--muted);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  #note b { color: var(--ink); }
+
+  #footer-license {
+    position: fixed; left: 0; right: 0; bottom: 6px; text-align: center;
+    font-size: 11.5px; color: var(--muted); pointer-events: none;
+  }
+  #footer-license a { color: var(--muted); pointer-events: auto; }
+  #footer-license a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div id="viewport"></div>
+
+  <div id="panel">
+    <h1>Fetal Umbilical Geometry</h1>
+    <p class="sub">Real digitized cord sheath &amp; placenta, the umbilical vein (UV) centreline recovered from the original CMISS 1D source mesh, and a synthetic umbilical artery (UA) pair generated from it. Companion data/code for the manuscript "A Gestational-Age-Continuous Digital Twin of the Fetal Umbilical Circulation." &rarr; <a href="flow.html">View simulated pressure/flow over a cardiac cycle</a></p>
+
+    <div class="row-label">Layers</div>
+    <div class="layer-row"><label><input type="checkbox" data-layer="cord" checked><span class="swatch" style="background:#c9a876"></span>Cord sheath (real)</label><input type="range" class="opacity-slider" data-opacity="cord" min="0" max="100" value="35"></div>
+    <div class="layer-row"><label><input type="checkbox" data-layer="placenta" checked><span class="swatch" style="background:#8b2f2f"></span>Placenta (real)</label><input type="range" class="opacity-slider" data-opacity="placenta" min="0" max="100" value="45"></div>
+    <div class="layer-row"><label><input type="checkbox" data-layer="uv" checked><span class="swatch" style="background:#2dc7b4"></span>UV centreline (real)</label></div>
+    <div class="layer-row"><label><input type="checkbox" data-layer="ua1" checked><span class="swatch" style="background:#e8a13d"></span>UA #1 (synthetic)</label></div>
+    <div class="layer-row"><label><input type="checkbox" data-layer="ua2" checked><span class="swatch" style="background:#e8a13d"></span>UA #2 (synthetic)</label></div>
+
+    <div class="row-label">Gestational age</div>
+    <div class="slider-row">
+      <input type="range" id="ga-slider" min="15" max="40" step="1" value="34">
+      <span class="slider-val"><b class="num" id="ga-val">34</b> wk</span>
+    </div>
+
+    <div class="row-label">Coiling (pitch)</div>
+    <div class="slider-row">
+      <input type="range" id="pitch-slider" min="15" max="150" step="1" value="50">
+      <span class="slider-val"><b class="num" id="pitch-val">50</b> mm/turn</span>
+    </div>
+    <div class="sub-readout"><b class="num" id="coil-val">0.20</b> spirals/cm</div>
+
+    <div class="meta-grid" id="meta-grid">
+      <div class="k">UV diameter</div><div class="v num" id="uv-diam-val-row"><b class="num" id="uv-diam-val">4.32</b> mm</div>
+      <div class="k">UA diameter</div><div class="v num" id="ua-diam-val-row"><b class="num" id="ua-diam-val">4.72</b> mm</div>
+    </div>
+  </div>
+
+  <div id="note">
+    <b>Explore the geometry:</b> drag the <b>gestational age</b> slider to see the vein, arteries, and cord grow according to literature-anchored growth curves. Drag <b>coiling</b> to see how tightly the arteries wind around the vein &mdash; from a straightened cord to a hypercoiled one &mdash; while staying inside the real digitized cord boundary throughout.
+  </div>
+
+  <div id="hint">
+    <button id="theme-toggle" aria-label="Toggle theme">&#9788;</button>
+    <span>drag — <kbd>rotate</kbd> · <kbd>shift</kbd>/right-drag — <kbd>pan</kbd><br />scroll / pinch — <kbd>zoom</kbd></span>
+  </div>
+
+  <div id="footer-license">MIT License &mdash; <a href="https://github.com/hwe001/fetal-umbilical-circulation/blob/main/LICENSE" target="_blank" rel="noopener">github.com/hwe001/fetal-umbilical-circulation</a></div>
+
+  <script src="three.min.js"></script>
+  <script src="scene_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

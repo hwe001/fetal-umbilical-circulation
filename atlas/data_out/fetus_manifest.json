@@ -1,0 +1,210 @@
+[
+  {
+    "part": 1,
+    "group": "cord",
+    "n_vertices": 2821,
+    "n_triangles": 4464,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_1.stl"
+  },
+  {
+    "part": 2,
+    "group": "uv",
+    "n_vertices": 3731,
+    "n_triangles": 5904,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_2.stl"
+  },
+  {
+    "part": 3,
+    "group": "arm_right",
+    "n_vertices": 4116,
+    "n_triangles": 6048,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_3.stl"
+  },
+  {
+    "part": 4,
+    "group": "kidney",
+    "n_vertices": 3185,
+    "n_triangles": 4680,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_4.stl"
+  },
+  {
+    "part": 5,
+    "group": "svc",
+    "n_vertices": 637,
+    "n_triangles": 1008,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_5.stl"
+  },
+  {
+    "part": 6,
+    "group": "liver",
+    "n_vertices": 7007,
+    "n_triangles": 11088,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_6.stl"
+  },
+  {
+    "part": 7,
+    "group": "heart",
+    "n_vertices": 1715,
+    "n_triangles": 2520,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_7.stl"
+  },
+  {
+    "part": 8,
+    "group": "torso",
+    "n_vertices": 10192,
+    "n_triangles": 16128,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_8.stl"
+  },
+  {
+    "part": 9,
+    "group": "head",
+    "n_vertices": 7791,
+    "n_triangles": 11448,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_9.stl"
+  },
+  {
+    "part": 10,
+    "group": "liver",
+    "n_vertices": 2058,
+    "n_triangles": 3024,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_10.stl"
+  },
+  {
+    "part": 11,
+    "group": "sex_organ_m",
+    "n_vertices": 1960,
+    "n_triangles": 2880,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_11.stl"
+  },
+  {
+    "part": 12,
+    "group": "portal",
+    "n_vertices": 637,
+    "n_triangles": 1008,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_12.stl"
+  },
+  {
+    "part": 13,
+    "group": "arm_left",
+    "n_vertices": 3430,
+    "n_triangles": 5040,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_13.stl"
+  },
+  {
+    "part": 14,
+    "group": "eye",
+    "n_vertices": 2695,
+    "n_triangles": 3960,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_14.stl"
+  },
+  {
+    "part": 15,
+    "group": "womb",
+    "n_vertices": 13195,
+    "n_triangles": 20880,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_15.stl"
+  },
+  {
+    "part": 16,
+    "group": "brain_left",
+    "n_vertices": 3136,
+    "n_triangles": 4608,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_16.stl"
+  },
+  {
+    "part": 17,
+    "group": "leg_left",
+    "n_vertices": 5488,
+    "n_triangles": 8064,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_17.stl"
+  },
+  {
+    "part": 18,
+    "group": "placenta",
+    "n_vertices": 2058,
+    "n_triangles": 3024,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_18.stl"
+  },
+  {
+    "part": 19,
+    "group": "torso",
+    "n_vertices": 2744,
+    "n_triangles": 4032,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_19.stl"
+  },
+  {
+    "part": 20,
+    "group": "lung",
+    "n_vertices": 4312,
+    "n_triangles": 6336,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_20.stl"
+  },
+  {
+    "part": 21,
+    "group": "bladder",
+    "n_vertices": 1176,
+    "n_triangles": 1728,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_21.stl"
+  },
+  {
+    "part": 22,
+    "group": "aorta",
+    "n_vertices": 2639,
+    "n_triangles": 4176,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_22.stl"
+  },
+  {
+    "part": 23,
+    "group": "head",
+    "n_vertices": 28574,
+    "n_triangles": 45216,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_23.stl"
+  },
+  {
+    "part": 24,
+    "group": "leg_right",
+    "n_vertices": 5537,
+    "n_triangles": 8136,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_24.stl"
+  },
+  {
+    "part": 25,
+    "group": "cerebellum",
+    "n_vertices": 2009,
+    "n_triangles": 2952,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_25.stl"
+  },
+  {
+    "part": 26,
+    "group": "brain_right",
+    "n_vertices": 2352,
+    "n_triangles": 3456,
+    "n_quads_in_source": 0,
+    "stl": "BasicMesh_26.stl"
+  }
+]

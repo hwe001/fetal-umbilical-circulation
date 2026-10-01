@@ -1,0 +1,25 @@
+{
+  "ga_weeks": 25.0,
+  "length_cm": 72.2,
+  "R_total_dyn_s_cm5": 5578.95506443318,
+  "dp_inlet_dyn_cm2": 12564.10390234762,
+  "p0_dyn_cm2": 30000.0,
+  "metrics": {
+    "PSV_cm_s": 11.535361824275215,
+    "EDV_cm_s": 6.125681861608834,
+    "TAV_cm_s": 6.759896473655477,
+    "PI": 0.8002607708193268,
+    "RI": 0.46896491372140203,
+    "S_D": 1.8831147429595039,
+    "mean_flow_mL_s_per_artery": 0.2835311515391061,
+    "total_two_UA_flow_mL_min": 34.02373818469273,
+    "diastolic_definition": "end_cycle"
+  },
+  "periodic_convergence": true,
+  "outlet_fallback_fraction": 0.0,
+  "optimizer_success": true,
+  "optimizer_message": "`xtol` termination condition is satisfied.",
+  "cost": 210.99994367004638,
+  "nfev": 10,
+  "index_definition": "end_cycle"
+}

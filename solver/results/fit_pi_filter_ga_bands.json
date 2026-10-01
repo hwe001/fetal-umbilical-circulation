@@ -1,0 +1,160 @@
+{
+  "bpm": 140.0,
+  "R_series_convention": "R_series(GA) = R_series(26) * Rs_prior(GA)/Rs_prior(26) -- FLAGGED assumption: unresolved microcirculatory resistance scales like the geometric conduit prior (no per-band flow target exists; Doppler indices are flow-scale invariant)",
+  "R_series_matched_dyn_s_cm5": 102011.90138849533,
+  "frozen": {
+    "Cm": 4e-05,
+    "note": "Cm/Cuv not identifiable from UA Doppler; Cm frozen at the matched prior, Cuv re-derived from GA geometry"
+  },
+  "f1_inflation": 1.0653703413940596,
+  "f1_inflation_source": "measured matched-case 1D reference (pi_filter_matched.json)",
+  "image_radius_sanity_note": {
+    "ga_weeks": 30,
+    "site": "intra-abdominal UA",
+    "diameter_cm": 0.33,
+    "radius_cm": 0.165,
+    "curve_radius_cm_30wk": 0.18000000000000002,
+    "role": "external consistency note only; not a fit input"
+  },
+  "bands": [
+    {
+      "band": "20-24",
+      "ga": 22.0,
+      "status": "fitted",
+      "status_ok": true,
+      "targets": {
+        "PI": 1.19,
+        "RI": 0.72,
+        "S_D": 3.51
+      },
+      "model": {
+        "RI": 0.7200000018127353,
+        "PI": 1.2889428052979897,
+        "S_D": 3.571428594550195,
+        "PSV_cm_s": 4.966443035069358,
+        "EDV_cm_s": 1.3906040408165738,
+        "total_two_UA_flow_mL_min": 8.901089509246631
+      },
+      "split_fraction_Rs": 0.7434877981082992,
+      "Rs": 299062.95249414555,
+      "Rout": 103180.30321908797,
+      "R_series_total": 402243.25571323355,
+      "Ls": 2835.364409922201,
+      "Cm": 4e-05,
+      "R_UV": 2209.18359051295,
+      "Cuv": 3.314509604395336e-05,
+      "converged": true,
+      "flags": {
+        "positive_pressure": true,
+        "positive_mean_flow": true,
+        "positive_edv": true,
+        "periodic": true,
+        "stable_lti": true,
+        "stiff": false,
+        "converged_within_budget": true,
+        "method_used": "RK45"
+      },
+      "PI_target_F1_adjusted": 1.2677907062589309
+    },
+    {
+      "band": "24-28",
+      "ga": 26.0,
+      "status": "fitted",
+      "status_ok": true,
+      "targets": {
+        "PI": 1.14,
+        "RI": 0.7,
+        "S_D": 3.31
+      },
+      "model": {
+        "RI": 0.7000000000169135,
+        "PI": 1.2194021053177913,
+        "S_D": 3.333333333521261,
+        "PSV_cm_s": 9.75742418829021,
+        "EDV_cm_s": 2.927227256322031,
+        "total_two_UA_flow_mL_min": 36.37301688384275
+      },
+      "split_fraction_Rs": 0.7483412707145133,
+      "Rs": 73485.23851387737,
+      "Rout": 24712.256919875672,
+      "R_series_total": 98197.49543375304,
+      "Ls": 1400.9244134658197,
+      "Cm": 4e-05,
+      "R_UV": 778.5097769007914,
+      "Cuv": 5.6486205240754406e-05,
+      "converged": true,
+      "flags": {
+        "positive_pressure": true,
+        "positive_mean_flow": true,
+        "positive_edv": true,
+        "periodic": true,
+        "stable_lti": true,
+        "stiff": false,
+        "converged_within_budget": true,
+        "method_used": "RK45"
+      },
+      "PI_target_F1_adjusted": 1.214522189189228
+    },
+    {
+      "band": "28-32",
+      "ga": 30.0,
+      "status": "fitted",
+      "status_ok": true,
+      "targets": {
+        "PI": 0.98,
+        "RI": 0.63,
+        "S_D": 2.76
+      },
+      "model": {
+        "RI": 0.6299999999771655,
+        "PI": 1.005986253367314,
+        "S_D": 2.7027027025359063,
+        "PSV_cm_s": 16.7134108063664,
+        "EDV_cm_s": 6.183961998737209,
+        "total_two_UA_flow_mL_min": 127.84675822438525
+      },
+      "split_fraction_Rs": 0.8370338905943858,
+      "Rs": 23231.501158990166,
+      "Rout": 4523.051458339645,
+      "R_series_total": 27754.55261732981,
+      "Ls": 744.7861873948509,
+      "Cm": 4e-05,
+      "R_UV": 404.55290873281206,
+      "Cuv": 7.853957865077676e-05,
+      "converged": true,
+      "flags": {
+        "positive_pressure": true,
+        "positive_mean_flow": true,
+        "positive_edv": true,
+        "periodic": true,
+        "stable_lti": true,
+        "stiff": false,
+        "converged_within_budget": true,
+        "method_used": "RK45"
+      },
+      "PI_target_F1_adjusted": 1.0440629345661785
+    },
+    {
+      "band": "32-36",
+      "ga": 34.0,
+      "status": "skipped: GA beyond the UA diameter curve's anchored 12-30 week range; re-run with --allow-geometry-extrapolation",
+      "status_ok": false
+    },
+    {
+      "band": "36-40",
+      "ga": 38.0,
+      "status": "skipped: GA beyond the UA diameter curve's anchored 12-30 week range; re-run with --allow-geometry-extrapolation",
+      "status_ok": false
+    }
+  ],
+  "slope_summary": {
+    "model_PI_slope_per_week": -0.03536956899133436,
+    "cohort_cross_sectional_PI_slope_per_week": -0.0256,
+    "bands_used": [
+      "20-24",
+      "24-28",
+      "28-32"
+    ]
+  },
+  "longitudinal_note": "185 patients with repeated GA-separated observations are validation context only (handover: repeated records are not independent samples); they constrain nothing in this fit"
+}

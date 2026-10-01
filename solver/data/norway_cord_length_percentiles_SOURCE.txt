@@ -1,0 +1,4 @@
+Umbilical cord length (cm) at delivery, empirical percentiles by gestational week, parity and sex.
+Source: Linde LE, Rasmussen S, Kessler J, Ebbing C. Extreme umbilical cord lengths, cord knot and entanglement: Risk factors and risk of adverse outcomes, a population-based study. PLOS ONE 2018;13(3):e0194814. https://doi.org/10.1371/journal.pone.0194814 (S1 Table; open access, CC BY).
+Population: Norwegian singleton births, 1999-2013, >22 and <45 weeks; cord length measured by the attending midwife or physician at delivery (n = 797,096 with a measurement).
+Table transcribed unchanged from S1 Table; columns for weeks 17-27 are identical across groups in the source.

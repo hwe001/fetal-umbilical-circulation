@@ -1,0 +1,125 @@
+{
+  "purpose": "sensitivity of the provisional 32-40-week bands to the unverifiable extrapolated UA radius (no third-trimester acquisitions exist in the image cohort beyond one 30-week patient; queue audit 2026-09-16)",
+  "radii_scales": [
+    0.8,
+    1.0,
+    1.2
+  ],
+  "bands": [
+    {
+      "band": "32-36",
+      "ga": 34.0,
+      "radius_scale": 0.8,
+      "r0_cm": 0.1886918695007782,
+      "split_fraction_Rs": 0.86911985568463,
+      "model_RI": 0.6099999998463553,
+      "model_PI": 0.9531732758561071,
+      "model_S_D": 2.5641025630924084,
+      "total_two_UA_flow_mL_min": 154.85865631109002,
+      "R_series_total": 22983.253233073494,
+      "converged": true
+    },
+    {
+      "band": "32-36",
+      "ga": 34.0,
+      "radius_scale": 1.0,
+      "r0_cm": 0.23586483687597276,
+      "split_fraction_Rs": 0.7427094402226573,
+      "model_RI": 0.6099999886519332,
+      "model_PI": 0.9228556550337523,
+      "model_S_D": 2.564102489493316,
+      "total_two_UA_flow_mL_min": 371.9821748371097,
+      "R_series_total": 9413.940524266902,
+      "converged": true
+    },
+    {
+      "band": "32-36",
+      "ga": 34.0,
+      "radius_scale": 1.2,
+      "r0_cm": 0.2830378042511673,
+      "split_fraction_Rs": 0.5152658849902011,
+      "model_RI": 0.609999999934533,
+      "model_PI": 0.8880264437344526,
+      "model_S_D": 2.564102563672143,
+      "total_two_UA_flow_mL_min": 749.3894391391993,
+      "R_series_total": 4539.901873199702,
+      "converged": true
+    },
+    {
+      "band": "36-40",
+      "ga": 38.0,
+      "radius_scale": 0.8,
+      "r0_cm": 0.2369467574325737,
+      "split_fraction_Rs": 0.914879176596652,
+      "model_RI": 0.5500000051741711,
+      "model_PI": 0.8005291659445893,
+      "model_S_D": 2.222222247773685,
+      "total_two_UA_flow_mL_min": 380.5975458833798,
+      "R_series_total": 9243.174929510598,
+      "converged": true
+    },
+    {
+      "band": "36-40",
+      "ga": 38.0,
+      "radius_scale": 1.0,
+      "r0_cm": 0.2961834467907171,
+      "split_fraction_Rs": 0.6518303032080947,
+      "model_RI": 0.5500000085045897,
+      "model_PI": 0.7717724142628865,
+      "model_S_D": 2.222222264220197,
+      "total_two_UA_flow_mL_min": 899.6145310549906,
+      "R_series_total": 3786.0044511275423,
+      "converged": true
+    },
+    {
+      "band": "36-40",
+      "ga": 38.0,
+      "radius_scale": 1.2,
+      "r0_cm": 0.35542013614886053,
+      "split_fraction_Rs": null,
+      "model_RI": null,
+      "model_PI": null,
+      "model_S_D": null,
+      "total_two_UA_flow_mL_min": null,
+      "R_series_total": 1825.8123317551808,
+      "converged": null,
+      "status": "RI target 0.55 unreachable: model RI spans [0.547, 0.411] over the full split range"
+    }
+  ],
+  "summary": {
+    "32-36": {
+      "PI_range": [
+        0.8880264437344526,
+        0.9531732758561071
+      ],
+      "flow_range_mL_min": [
+        154.85865631109002,
+        749.3894391391993
+      ],
+      "f_range": [
+        0.5152658849902011,
+        0.86911985568463
+      ],
+      "n_radius_scales_unreachable": 0,
+      "unreachable_status": []
+    },
+    "36-40": {
+      "PI_range": [
+        0.7717724142628865,
+        0.8005291659445893
+      ],
+      "flow_range_mL_min": [
+        380.5975458833798,
+        899.6145310549906
+      ],
+      "f_range": [
+        0.6518303032080947,
+        0.914879176596652
+      ],
+      "n_radius_scales_unreachable": 1,
+      "unreachable_status": [
+        "RI target 0.55 unreachable: model RI spans [0.547, 0.411] over the full split range"
+      ]
+    }
+  }
+}

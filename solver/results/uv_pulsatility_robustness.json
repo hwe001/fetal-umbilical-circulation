@@ -1,0 +1,436 @@
+{
+ "arterial_pulsatility_reference": 1.679690732225654,
+ "efflux_pulsatility_reference": 0.021105521947143324,
+ "plateau_points": 25,
+ "efflux_pulsatility_max_in_plateau": 0.1068532629021874,
+ "efflux_pulsatility_min_in_plateau": 0.00017974432114367374,
+ "worst_point_in_plateau": {
+  "Cm": 1e-05,
+  "Cuv": 1e-05,
+  "in_plateau": true,
+  "efflux_pulsatility": 0.1068532629021874,
+  "arterial_pulsatility": 1.685071621727234,
+  "RI": 0.8327437336848064,
+  "PI": 1.6850716217272335,
+  "converged": true
+ },
+ "outside_points": [
+  {
+   "Cm": 1e-06,
+   "Cuv": 1e-06,
+   "efflux_pulsatility": 0.7366176325320283
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 1e-05,
+   "efflux_pulsatility": 0.19437209554904664
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 3.2e-05,
+   "efflux_pulsatility": 0.06420222820021103
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 0.0001,
+   "efflux_pulsatility": 0.020800711258564506
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 0.00016,
+   "efflux_pulsatility": 0.013025885710995833
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 0.001,
+   "efflux_pulsatility": 0.0020896571790652435
+  },
+  {
+   "Cm": 1e-05,
+   "Cuv": 1e-06,
+   "efflux_pulsatility": 0.194041383551073
+  },
+  {
+   "Cm": 3.2e-05,
+   "Cuv": 1e-06,
+   "efflux_pulsatility": 0.06402692884333919
+  },
+  {
+   "Cm": 0.0001,
+   "Cuv": 1e-06,
+   "efflux_pulsatility": 0.02073833299813408
+  },
+  {
+   "Cm": 0.00016,
+   "Cuv": 1e-06,
+   "efflux_pulsatility": 0.01298633605663564
+  },
+  {
+   "Cm": 0.001,
+   "Cuv": 1e-06,
+   "efflux_pulsatility": 0.002082994670167256
+  }
+ ],
+ "grid": [
+  {
+   "Cm": 1e-06,
+   "Cuv": 1e-06,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.7366176325320283,
+   "arterial_pulsatility": 1.3249783288915913,
+   "RI": 0.6985039653933715,
+   "PI": 1.3249783288915913,
+   "converged": true
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 1e-05,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.19437209554904664,
+   "arterial_pulsatility": 1.6652887628832573,
+   "RI": 0.8208459562983528,
+   "PI": 1.6652887628832573,
+   "converged": true
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 3.2e-05,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.06420222820021103,
+   "arterial_pulsatility": 1.6697928957770387,
+   "RI": 0.8321222673852994,
+   "PI": 1.6697928957770383,
+   "converged": true
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 0.0001,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.020800711258564506,
+   "arterial_pulsatility": 1.6653474901721683,
+   "RI": 0.8342122664620776,
+   "PI": 1.6653474901721679,
+   "converged": true
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 0.00016,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.013025885710995833,
+   "arterial_pulsatility": 1.6641884328901433,
+   "RI": 0.8344833511476828,
+   "PI": 1.6641884328901435,
+   "converged": true
+  },
+  {
+   "Cm": 1e-06,
+   "Cuv": 0.001,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.0020896571790652435,
+   "arterial_pulsatility": 1.662371394974991,
+   "RI": 0.8348102816037389,
+   "PI": 1.6623713949749908,
+   "converged": true
+  },
+  {
+   "Cm": 1e-05,
+   "Cuv": 1e-06,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.194041383551073,
+   "arterial_pulsatility": 1.6827790962745575,
+   "RI": 0.8252676201395502,
+   "PI": 1.6827790962745575,
+   "converged": true
+  },
+  {
+   "Cm": 1e-05,
+   "Cuv": 1e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.1068532629021874,
+   "arterial_pulsatility": 1.685071621727234,
+   "RI": 0.8327437336848064,
+   "PI": 1.6850716217272335,
+   "converged": true
+  },
+  {
+   "Cm": 1e-05,
+   "Cuv": 3.2e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.05033059857078754,
+   "arterial_pulsatility": 1.6769646490286445,
+   "RI": 0.8349984871179409,
+   "PI": 1.6769646490286447,
+   "converged": true
+  },
+  {
+   "Cm": 1e-05,
+   "Cuv": 0.0001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.0190254400036526,
+   "arterial_pulsatility": 1.6692400481386978,
+   "RI": 0.8352697072429477,
+   "PI": 1.6692400481386973,
+   "converged": true
+  },
+  {
+   "Cm": 1e-05,
+   "Cuv": 0.00016,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.012280042039652883,
+   "arterial_pulsatility": 1.6672641548945535,
+   "RI": 0.8352336973132666,
+   "PI": 1.6672641548945537,
+   "converged": true
+  },
+  {
+   "Cm": 1e-05,
+   "Cuv": 0.001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.002058582930869715,
+   "arterial_pulsatility": 1.6640626845846485,
+   "RI": 0.8351145876577852,
+   "PI": 1.6640626845846482,
+   "converged": true
+  },
+  {
+   "Cm": 3.2e-05,
+   "Cuv": 1e-06,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.06402692884333919,
+   "arterial_pulsatility": 1.6892618806461117,
+   "RI": 0.8372662282310206,
+   "PI": 1.6892618806461113,
+   "converged": true
+  },
+  {
+   "Cm": 3.2e-05,
+   "Cuv": 1e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.05024114994384753,
+   "arterial_pulsatility": 1.6872856787962196,
+   "RI": 0.8377981857609011,
+   "PI": 1.6872856787962196,
+   "converged": true
+  },
+  {
+   "Cm": 3.2e-05,
+   "Cuv": 3.2e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.032507471813590226,
+   "arterial_pulsatility": 1.6822343797269592,
+   "RI": 0.8377357046381197,
+   "PI": 1.6822343797269592,
+   "converged": true
+  },
+  {
+   "Cm": 3.2e-05,
+   "Cuv": 0.0001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.01535528824360249,
+   "arterial_pulsatility": 1.6751507961355963,
+   "RI": 0.836953754773105,
+   "PI": 1.6751507961355963,
+   "converged": true
+  },
+  {
+   "Cm": 3.2e-05,
+   "Cuv": 0.00016,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.010455553791094247,
+   "arterial_pulsatility": 1.672785843684979,
+   "RI": 0.8366064043015465,
+   "PI": 1.6727858436849792,
+   "converged": true
+  },
+  {
+   "Cm": 3.2e-05,
+   "Cuv": 0.001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.0019079271357809414,
+   "arterial_pulsatility": 1.6683308389055174,
+   "RI": 0.8358712917264636,
+   "PI": 1.6683308389055174,
+   "converged": true
+  },
+  {
+   "Cm": 0.0001,
+   "Cuv": 1e-06,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.02073833299813408,
+   "arterial_pulsatility": 1.68520133142693,
+   "RI": 0.8395576638834311,
+   "PI": 1.6852013314269296,
+   "converged": true
+  },
+  {
+   "Cm": 0.0001,
+   "Cuv": 1e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.018969271848990266,
+   "arterial_pulsatility": 1.6848241202628484,
+   "RI": 0.8395841154030612,
+   "PI": 1.6848241202628482,
+   "converged": true
+  },
+  {
+   "Cm": 0.0001,
+   "Cuv": 3.2e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.015321986608127575,
+   "arterial_pulsatility": 1.6835923668498431,
+   "RI": 0.839470458398155,
+   "PI": 1.6835923668498434,
+   "converged": true
+  },
+  {
+   "Cm": 0.0001,
+   "Cuv": 0.0001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.009087837106334103,
+   "arterial_pulsatility": 1.6807909112002368,
+   "RI": 0.8389404352666298,
+   "PI": 1.680790911200237,
+   "converged": true
+  },
+  {
+   "Cm": 0.0001,
+   "Cuv": 0.00016,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.006577155907564451,
+   "arterial_pulsatility": 1.67954593452941,
+   "RI": 0.8386417888023726,
+   "PI": 1.6795459345294101,
+   "converged": true
+  },
+  {
+   "Cm": 0.0001,
+   "Cuv": 0.001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.001314002489275697,
+   "arterial_pulsatility": 1.676908467788608,
+   "RI": 0.8379134222564534,
+   "PI": 1.6769084677886077,
+   "converged": true
+  },
+  {
+   "Cm": 0.00016,
+   "Cuv": 1e-06,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.01298633605663564,
+   "arterial_pulsatility": 1.6841011651961844,
+   "RI": 0.8398633980205142,
+   "PI": 1.6841011651961844,
+   "converged": true
+  },
+  {
+   "Cm": 0.00016,
+   "Cuv": 1e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.012241286296167497,
+   "arterial_pulsatility": 1.6839379407658897,
+   "RI": 0.8398709189505263,
+   "PI": 1.6839379407658899,
+   "converged": true
+  },
+  {
+   "Cm": 0.00016,
+   "Cuv": 3.2e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.010425729216495743,
+   "arterial_pulsatility": 1.6833614827656977,
+   "RI": 0.8398093495618828,
+   "PI": 1.6833614827656973,
+   "converged": true
+  },
+  {
+   "Cm": 0.00016,
+   "Cuv": 0.0001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.006570429022714471,
+   "arterial_pulsatility": 1.681876287127948,
+   "RI": 0.8394985490935547,
+   "PI": 1.6818762871279478,
+   "converged": true
+  },
+  {
+   "Cm": 0.00016,
+   "Cuv": 0.00016,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.004814353562945139,
+   "arterial_pulsatility": 1.6811894701452432,
+   "RI": 0.8393145477950467,
+   "PI": 1.681189470145243,
+   "converged": true
+  },
+  {
+   "Cm": 0.00016,
+   "Cuv": 0.001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.0009629516825197269,
+   "arterial_pulsatility": 1.6798364929378866,
+   "RI": 0.8388868054483448,
+   "PI": 1.6798364929378864,
+   "converged": true
+  },
+  {
+   "Cm": 0.001,
+   "Cuv": 1e-06,
+   "in_plateau": false,
+   "efflux_pulsatility": 0.002082994670167256,
+   "arterial_pulsatility": 1.6823618429452085,
+   "RI": 0.8402383379782785,
+   "PI": 1.682361842945208,
+   "converged": true
+  },
+  {
+   "Cm": 0.001,
+   "Cuv": 1e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.002051081467064642,
+   "arterial_pulsatility": 1.68235731200391,
+   "RI": 0.8402384278724465,
+   "PI": 1.6823573120039093,
+   "converged": true
+  },
+  {
+   "Cm": 0.001,
+   "Cuv": 3.2e-05,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.0019001356790805115,
+   "arterial_pulsatility": 1.6823379603106512,
+   "RI": 0.840235952086082,
+   "PI": 1.682337960310651,
+   "converged": true
+  },
+  {
+   "Cm": 0.001,
+   "Cuv": 0.0001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.0013096865569323449,
+   "arterial_pulsatility": 1.6822785137150262,
+   "RI": 0.8402214747871875,
+   "PI": 1.6822785137150265,
+   "converged": true
+  },
+  {
+   "Cm": 0.001,
+   "Cuv": 0.00016,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.000960731742912338,
+   "arterial_pulsatility": 1.6822529418272214,
+   "RI": 0.8402131533863535,
+   "PI": 1.6822529418272212,
+   "converged": true
+  },
+  {
+   "Cm": 0.001,
+   "Cuv": 0.001,
+   "in_plateau": true,
+   "efflux_pulsatility": 0.00017974432114367374,
+   "arterial_pulsatility": 1.6822229497851546,
+   "RI": 0.8401997169327858,
+   "PI": 1.682222949785155,
+   "converged": true
+  }
+ ]
+}

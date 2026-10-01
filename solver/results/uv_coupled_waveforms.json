@@ -1,0 +1,96 @@
+{
+  "bpm": 140.0,
+  "coupling": "one-way quasi-steady: pi-filter efflux Q_out(t) -> solve_venous_flow_UV (storage-consistent inflow; the UV does not feed back, its drop is inside Rout)",
+  "f1_inflation": 1.0653703413940596,
+  "scale_caveat": "absolute flow/velocity scale follows the matched 1D benchmark's DC convention, which the 1D project documents as undershooting literature umbilical flow by 54-92% at GA 19-29; waveform shape and pulsatility are the scale-free outputs",
+  "cases": [
+    {
+      "case": "matched_1D_fit_GA26",
+      "ga": 26.0,
+      "params_source": "fitted (fit_pi_filter_matched.json)",
+      "provisional": null,
+      "converged": true,
+      "uv_radius_cm": 0.29,
+      "uv_resistance_dyn_s_cm5": 778.5097769007914,
+      "uv_mean_flow_mL_min": 35.29044999658044,
+      "uv_mean_velocity_cm_s": 2.226178977761847,
+      "uv_velocity_range_cm_s": [
+        2.200625062295796,
+        2.2476096491225266
+      ],
+      "uv_mean_pressure_drop_mmHg": 0.3433812114041802,
+      "mean_efflux_total_mL_min": 35.29044999658045,
+      "mean_arterial_inflow_total_mL_min": 35.2905362368831,
+      "efflux_pulsatility": 0.021105484912074705,
+      "arterial_inflow_pulsatility": 1.6796915981648115,
+      "model_PI": 1.679691598164811,
+      "model_RI": 0.8378350881208587
+    },
+    {
+      "case": "band_20-24",
+      "ga": 22.0,
+      "params_source": "GA-band RI-matched fit",
+      "provisional": null,
+      "converged": true,
+      "uv_radius_cm": 0.2234375,
+      "uv_resistance_dyn_s_cm5": 2209.18359051295,
+      "uv_mean_flow_mL_min": 8.901034318966737,
+      "uv_mean_velocity_cm_s": 0.9458607965481723,
+      "uv_velocity_range_cm_s": [
+        0.9413813492049656,
+        0.9495800226554187
+      ],
+      "uv_mean_pressure_drop_mmHg": 0.24580789476115644,
+      "mean_efflux_total_mL_min": 8.901034318966737,
+      "mean_arterial_inflow_total_mL_min": 8.901089030235417,
+      "efflux_pulsatility": 0.008667949322324587,
+      "arterial_inflow_pulsatility": 1.2889428765201323,
+      "model_PI": 1.2889428765201325,
+      "model_RI": 0.7200000246599924
+    },
+    {
+      "case": "band_24-28",
+      "ga": 26.0,
+      "params_source": "GA-band RI-matched fit",
+      "provisional": null,
+      "converged": true,
+      "uv_radius_cm": 0.29,
+      "uv_resistance_dyn_s_cm5": 778.5097769007914,
+      "uv_mean_flow_mL_min": 36.37292151583835,
+      "uv_mean_velocity_cm_s": 2.2944630415930356,
+      "uv_velocity_range_cm_s": [
+        2.2571020353337197,
+        2.32578122793343
+      ],
+      "uv_mean_pressure_drop_mmHg": 0.35388179305406725,
+      "mean_efflux_total_mL_min": 36.37292151583834,
+      "mean_arterial_inflow_total_mL_min": 36.373010349058404,
+      "efflux_pulsatility": 0.02993257740688059,
+      "arterial_inflow_pulsatility": 1.2194023399755438,
+      "model_PI": 1.219402339975544,
+      "model_RI": 0.7000000833912476
+    },
+    {
+      "case": "band_28-32",
+      "ga": 30.0,
+      "params_source": "GA-band RI-matched fit",
+      "provisional": null,
+      "converged": true,
+      "uv_radius_cm": 0.3415625,
+      "uv_resistance_dyn_s_cm5": 404.55290873281206,
+      "uv_mean_flow_mL_min": 127.84683737095162,
+      "uv_mean_velocity_cm_s": 5.81364486508385,
+      "uv_velocity_range_cm_s": [
+        5.458708316947089,
+        6.1205765936129355
+      ],
+      "uv_mean_pressure_drop_mmHg": 0.6455708112160201,
+      "mean_efflux_total_mL_min": 127.84683737095162,
+      "mean_arterial_inflow_total_mL_min": 127.8467085783999,
+      "efflux_pulsatility": 0.11384738697077278,
+      "arterial_inflow_pulsatility": 1.005986969352983,
+      "model_PI": 1.005986969352983,
+      "model_RI": 0.630000194461707
+    }
+  ]
+}

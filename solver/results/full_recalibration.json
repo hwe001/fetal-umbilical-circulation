@@ -1,0 +1,471 @@
+{
+  "table_I": [
+    {
+      "ga_weeks": 19,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 17237.98661223165,
+      "dp_inlet_dyn_cm2": 40978.023309686476,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 5.748537754221488,
+        "EDV_cm_s": 1.1956700813890788,
+        "TAV_cm_s": 3.5667720592003787,
+        "PI": 1.2764672362755638,
+        "RI": 0.7920044831381636,
+        "S_D": 4.807795932756869,
+        "mean_flow_mL_s_per_artery": 0.05236830451207395,
+        "total_two_UA_flow_mL_min": 6.284196541448874,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": false,
+      "optimizer_message": "The maximum number of function evaluations is exceeded.",
+      "cost": 3.809911997166652,
+      "nfev": 18,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.295,
+        "RI": 0.74
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 5.417775208015236,
+          "EDV_cm_s": 1.1454111798996713,
+          "TAV_cm_s": 3.3734088690426867,
+          "PI": 1.2664827164363226,
+          "RI": 0.7885827418226743,
+          "S_D": 4.729982824586878,
+          "mean_flow_mL_s_per_artery": 0.049523495527010894,
+          "total_two_UA_flow_mL_min": 5.942819463241308,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    },
+    {
+      "ga_weeks": 23,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 7863.825308741737,
+      "dp_inlet_dyn_cm2": 16004.22162429592,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 8.461033051654788,
+        "EDV_cm_s": 2.2406680088874382,
+        "TAV_cm_s": 5.265020706869024,
+        "PI": 1.1814512020155845,
+        "RI": 0.7351779628789875,
+        "S_D": 3.776120789913877,
+        "mean_flow_mL_s_per_artery": 0.15572962807750798,
+        "total_two_UA_flow_mL_min": 18.68755536930096,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": true,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "cost": 0.8837647021425254,
+      "nfev": 17,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.19,
+        "RI": 0.71
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 8.179735990468888,
+          "EDV_cm_s": 2.189227379908885,
+          "TAV_cm_s": 5.106094237188465,
+          "PI": 1.1732076088471326,
+          "RI": 0.7323596528714624,
+          "S_D": 3.7363574316384285,
+          "mean_flow_mL_s_per_artery": 0.15101309031046342,
+          "total_two_UA_flow_mL_min": 18.12157083725561,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    },
+    {
+      "ga_weeks": 25,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 4683.854041708923,
+      "dp_inlet_dyn_cm2": 11085.109338410715,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 11.23359609524084,
+        "EDV_cm_s": 3.351747344368221,
+        "TAV_cm_s": 6.9171677297880425,
+        "PI": 1.1394618518400648,
+        "RI": 0.7016318446959116,
+        "S_D": 3.351564107036918,
+        "mean_flow_mL_s_per_artery": 0.2899272728815331,
+        "total_two_UA_flow_mL_min": 34.79127274578397,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": false,
+      "optimizer_message": "The maximum number of function evaluations is exceeded.",
+      "cost": 0.0036906506920204927,
+      "nfev": 18,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.14,
+        "RI": 0.7
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 10.957751941943952,
+          "EDV_cm_s": 3.3027863514350777,
+          "TAV_cm_s": 6.762862596395528,
+          "PI": 1.1319120389328654,
+          "RI": 0.6985890565023003,
+          "S_D": 3.317729570119712,
+          "mean_flow_mL_s_per_artery": 0.28343368378633066,
+          "total_two_UA_flow_mL_min": 34.01204205435968,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    },
+    {
+      "ga_weeks": 29,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 1199.4229013381528,
+      "dp_inlet_dyn_cm2": 6223.9391114055215,
+      "p0_dyn_cm2": 30000.0,
+      "metrics": {
+        "PSV_cm_s": 18.263370787695003,
+        "EDV_cm_s": 7.016987202546901,
+        "TAV_cm_s": 11.645928309874206,
+        "PI": 0.9656923248971623,
+        "RI": 0.6157890411295479,
+        "S_D": 2.6027367957955074,
+        "mean_flow_mL_s_per_artery": 0.9304382067653489,
+        "total_two_UA_flow_mL_min": 111.65258481184188,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": false,
+      "optimizer_message": "The maximum number of function evaluations is exceeded.",
+      "cost": 0.2929423934406688,
+      "nfev": 18,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 0.96,
+        "RI": 0.63
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 18.050773046212143,
+          "EDV_cm_s": 6.853867398636019,
+          "TAV_cm_s": 11.493616994183244,
+          "PI": 0.974184684703059,
+          "RI": 0.6203006164284878,
+          "S_D": 2.6336624268226156,
+          "mean_flow_mL_s_per_artery": 0.9182236057920123,
+          "total_two_UA_flow_mL_min": 110.18683269504149,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15
+      }
+    }
+  ],
+  "table_II": [
+    {
+      "ga_weeks": 19,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 40824.258523328055,
+      "dp_inlet_dyn_cm2": 17984.3365252307,
+      "p0_dyn_cm2": 14769.44724550657,
+      "metrics": {
+        "PSV_cm_s": 2.299157553091661,
+        "EDV_cm_s": 0.482639546191921,
+        "TAV_cm_s": 1.4370792112623547,
+        "PI": 1.2640347119795017,
+        "RI": 0.790079829221395,
+        "S_D": 4.7637156367153635,
+        "mean_flow_mL_s_per_artery": 0.021852134211229137,
+        "total_two_UA_flow_mL_min": 2.6222561053474966,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": true,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "cost": 172.12764847808978,
+      "nfev": 15,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.295,
+        "RI": 0.74,
+        "UV_flow_mL_min": 31.2
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 2.1724577629636417,
+          "EDV_cm_s": 0.4651727160908801,
+          "TAV_cm_s": 1.363340830643232,
+          "PI": 1.252280433842251,
+          "RI": 0.7858772105855366,
+          "S_D": 4.6702175080690065,
+          "mean_flow_mL_s_per_artery": 0.02072858529100157,
+          "total_two_UA_flow_mL_min": 2.4874302349201884,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 28,
+        "uv": {
+          "mean_flow_mL_min": 2.4874302349201884,
+          "mean_velocity_cm_s": 0.5019988488943986,
+          "radius_cm": 0.1621337890625,
+          "length_cm": 61.78,
+          "resistance_dyn_s_cm5": 7968.231324392996,
+          "inertance_dyn_s2_cm5": 785.4892862145081
+        }
+      }
+    },
+    {
+      "ga_weeks": 23,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 3552.6668719049035,
+      "dp_inlet_dyn_cm2": 25267.183263758725,
+      "p0_dyn_cm2": 50275.502253792925,
+      "metrics": {
+        "PSV_cm_s": 14.776277819392144,
+        "EDV_cm_s": 4.270113181976342,
+        "TAV_cm_s": 9.330774461947902,
+        "PI": 1.125969197976148,
+        "RI": 0.7110156404630998,
+        "S_D": 3.4603948864309073,
+        "mean_flow_mL_s_per_artery": 0.2613011218941048,
+        "total_two_UA_flow_mL_min": 31.356134627292576,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": false,
+      "optimizer_message": "The maximum number of function evaluations is exceeded.",
+      "cost": 68.44706309782035,
+      "nfev": 32,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.19,
+        "RI": 0.71,
+        "UV_flow_mL_min": 71.7
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 14.253390435786898,
+          "EDV_cm_s": 4.15254973728956,
+          "TAV_cm_s": 9.02639339954053,
+          "PI": 1.1190339542492687,
+          "RI": 0.7086623175028246,
+          "S_D": 3.432443038018933,
+          "mean_flow_mL_s_per_artery": 0.2527556519598849,
+          "total_two_UA_flow_mL_min": 30.33067823518619,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15,
+        "uv": {
+          "mean_flow_mL_min": 30.33067823518619,
+          "mean_velocity_cm_s": 2.7503090615030583,
+          "radius_cm": 0.2418798828125,
+          "length_cm": 61.78,
+          "resistance_dyn_s_cm5": 1608.6333363470171,
+          "inertance_dyn_s2_cm5": 352.9293947083672
+        }
+      }
+    },
+    {
+      "ga_weeks": 25,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 550.2517970789495,
+      "dp_inlet_dyn_cm2": 12038.755011166004,
+      "p0_dyn_cm2": 32943.99999591569,
+      "metrics": {
+        "PSV_cm_s": 12.849283595893867,
+        "EDV_cm_s": 3.8037328276597826,
+        "TAV_cm_s": 7.9263818271677335,
+        "PI": 1.141195436388188,
+        "RI": 0.7039731593382134,
+        "S_D": 3.3780720618591107,
+        "mean_flow_mL_s_per_artery": 0.32828527397954704,
+        "total_two_UA_flow_mL_min": 39.39423287754565,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": true,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "cost": 66.15462520660164,
+      "nfev": 17,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 1.14,
+        "RI": 0.7,
+        "UV_flow_mL_min": 92.7
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 12.512120334984347,
+          "EDV_cm_s": 3.7497091461522576,
+          "TAV_cm_s": 7.741045071524471,
+          "PI": 1.13194163163637,
+          "RI": 0.7003138520281065,
+          "S_D": 3.3368242301735824,
+          "mean_flow_mL_s_per_artery": 0.32060462766288533,
+          "total_two_UA_flow_mL_min": 38.47255531954624,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15,
+        "uv": {
+          "mean_flow_mL_min": 38.47255531954624,
+          "mean_velocity_cm_s": 2.6940046196396747,
+          "radius_cm": 0.2752490234374999,
+          "length_cm": 61.78,
+          "resistance_dyn_s_cm5": 959.2966224936551,
+          "inertance_dyn_s2_cm5": 272.54345476130004
+        }
+      }
+    },
+    {
+      "ga_weeks": 29,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 312.2500000000002,
+      "dp_inlet_dyn_cm2": 3442.4920614653915,
+      "p0_dyn_cm2": 16723.999999999967,
+      "metrics": {
+        "PSV_cm_s": 10.411811088669705,
+        "EDV_cm_s": 4.000360118094377,
+        "TAV_cm_s": 6.639256687370437,
+        "PI": 0.9656880690833277,
+        "RI": 0.6157863330379062,
+        "S_D": 2.602718450665263,
+        "mean_flow_mL_s_per_artery": 0.5515259052220953,
+        "total_two_UA_flow_mL_min": 66.18310862665143,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": true,
+      "optimizer_message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+      "cost": 57.167161312167146,
+      "nfev": 15,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 0.96,
+        "RI": 0.63,
+        "UV_flow_mL_min": 141.8
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 10.290700903051718,
+          "EDV_cm_s": 3.900207554960488,
+          "TAV_cm_s": 6.552914999994778,
+          "PI": 0.9752138320268647,
+          "RI": 0.6209968988794653,
+          "S_D": 2.6385008382344846,
+          "mean_flow_mL_s_per_artery": 0.5443490181434825,
+          "total_two_UA_flow_mL_min": 65.3218821772179,
+          "diastolic_definition": "minimum"
+        },
+        "converged": true,
+        "fallback_fraction": 0.0,
+        "cycles": 15,
+        "uv": {
+          "mean_flow_mL_min": 65.3218821772179,
+          "mean_velocity_cm_s": 3.188346172569565,
+          "radius_cm": 0.32968261718749997,
+          "length_cm": 61.78,
+          "resistance_dyn_s_cm5": 466.0922330232176,
+          "inertance_dyn_s2_cm5": 189.974465806696
+        }
+      }
+    },
+    {
+      "ga_weeks": 33,
+      "length_cm": 72.2,
+      "R_total_dyn_s_cm5": 1445.7501159288247,
+      "dp_inlet_dyn_cm2": 3782.538404220859,
+      "p0_dyn_cm2": 21720.54350195628,
+      "metrics": {
+        "PSV_cm_s": 18.065645148989326,
+        "EDV_cm_s": 7.484925947312318,
+        "TAV_cm_s": 11.620260383038985,
+        "PI": 0.9105406292892284,
+        "RI": 0.5856817796661383,
+        "S_D": 2.413603725161279,
+        "mean_flow_mL_s_per_artery": 1.6774204313060639,
+        "total_two_UA_flow_mL_min": 201.29045175672766,
+        "diastolic_definition": "minimum"
+      },
+      "periodic_convergence": true,
+      "outlet_fallback_fraction": 0.0,
+      "optimizer_success": true,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "cost": 0.29961823101111457,
+      "nfev": 16,
+      "index_definition": "minimum",
+      "targets": {
+        "PI": 0.905,
+        "RI": 0.6,
+        "UV_flow_mL_min": 202.3
+      },
+      "production": {
+        "metrics": {
+          "PSV_cm_s": 17.93758158239075,
+          "EDV_cm_s": 7.2858908835865535,
+          "TAV_cm_s": 11.533091925067481,
+          "PI": 0.9235763287078691,
+          "RI": 0.5938197772023469,
+          "S_D": 2.4619613262120104,
+          "mean_flow_mL_s_per_artery": 1.6647308847055409,
+          "total_two_UA_flow_mL_min": 199.7677061646649,
+          "diastolic_definition": "minimum"
+        },
+        "converged": false,
+        "fallback_fraction": 0.0,
+        "cycles": 15,
+        "uv": {
+          "mean_flow_mL_min": 199.7677061646649,
+          "mean_velocity_cm_s": 7.6613402433995015,
+          "radius_cm": 0.3719287109375,
+          "length_cm": 61.78,
+          "resistance_dyn_s_cm5": 287.75126598202354,
+          "inertance_dyn_s2_cm5": 149.26841473749352
+        }
+      }
+    }
+  ],
+  "geometry": {
+    "UA_length_cm": 72.2,
+    "UV_length_cm": 61.78,
+    "index_definition": "minimum/pre-systolic",
+    "coarse_dx_cm": 0.73,
+    "production_dx_cm": 0.24982698961937716
+  },
+  "excluded": {
+    "table_I_GA": [
+      11,
+      33,
+      37
+    ],
+    "reason": "UA diameter curve is directly anchored only over 12-30 weeks; extrapolated production calibration is not accepted as validated."
+  }
+}

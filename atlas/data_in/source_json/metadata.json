@@ -1,0 +1,210 @@
+[
+   {
+      "GroupName" : "cord",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_1.json"
+   },
+   {
+      "GroupName" : "uv",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_2.json"
+   },
+   {
+      "GroupName" : "arm_right",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_3.json"
+   },
+   {
+      "GroupName" : "kidney",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_4.json"
+   },
+   {
+      "GroupName" : "svc",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_5.json"
+   },
+   {
+      "GroupName" : "liver",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_6.json"
+   },
+   {
+      "GroupName" : "heart",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_7.json"
+   },
+   {
+      "GroupName" : "torso",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_8.json"
+   },
+   {
+      "GroupName" : "head",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_9.json"
+   },
+   {
+      "GroupName" : "liver",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_10.json"
+   },
+   {
+      "GroupName" : "sex_organ_m",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_11.json"
+   },
+   {
+      "GroupName" : "portal",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_12.json"
+   },
+   {
+      "GroupName" : "arm_left",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_13.json"
+   },
+   {
+      "GroupName" : "eye",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_14.json"
+   },
+   {
+      "GroupName" : "womb",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_15.json"
+   },
+   {
+      "GroupName" : "brain_left",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_16.json"
+   },
+   {
+      "GroupName" : "leg_left",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_17.json"
+   },
+   {
+      "GroupName" : "placenta",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_18.json"
+   },
+   {
+      "GroupName" : "torso",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_19.json"
+   },
+   {
+      "GroupName" : "lung",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_20.json"
+   },
+   {
+      "GroupName" : "bladder",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_21.json"
+   },
+   {
+      "GroupName" : "aorta",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_22.json"
+   },
+   {
+      "GroupName" : "head",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_23.json"
+   },
+   {
+      "GroupName" : "leg_right",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_24.json"
+   },
+   {
+      "GroupName" : "cerebellum",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_25.json"
+   },
+   {
+      "GroupName" : "brain_right",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "BasicMesh_26.json"
+   }
+]

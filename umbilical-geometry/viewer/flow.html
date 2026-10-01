@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Umbilical Flow &amp; Pressure Viewer</title>
+<style>
+  :root {
+    --bg: #0c1119;
+    --panel: rgba(18,25,35,0.86);
+    --panel-border: rgba(255,255,255,0.09);
+    --ink: #dde5ec;
+    --muted: #8c9bab;
+    --accent: #3fc7b4;
+    --control-bg: rgba(255,255,255,0.06);
+    --control-bg-active: rgba(63,199,180,0.22);
+  }
+  :root[data-theme="light"] {
+    --bg: #eef2f4; --panel: rgba(255,255,255,0.88); --panel-border: rgba(10,20,30,0.10);
+    --ink: #182430; --muted: #55697a; --control-bg: rgba(10,20,30,0.05);
+    --control-bg-active: rgba(29,148,132,0.16);
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #eef2f4; --panel: rgba(255,255,255,0.88); --panel-border: rgba(10,20,30,0.10);
+      --ink: #182430; --muted: #55697a; --control-bg: rgba(10,20,30,0.05);
+      --control-bg-active: rgba(29,148,132,0.16);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); }
+  body { font-family: -apple-system, "Segoe UI", ui-sans-serif, system-ui, sans-serif; color: var(--ink); }
+  #viewport { position: fixed; inset: 0; cursor: grab; }
+  #viewport.dragging { cursor: grabbing; }
+  .num { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-variant-numeric: tabular-nums; }
+
+  #panel {
+    position: fixed; top: 16px; left: 16px; width: 300px;
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 12px; padding: 16px; backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  #panel h1 { font-size: 14px; font-weight: 650; margin: 0 0 2px; }
+  #panel .sub { font-size: 11.5px; color: var(--muted); margin: 0 0 12px; line-height: 1.45; }
+  #panel .sub a { color: var(--accent); }
+  .row-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 12px 0 6px; }
+
+  select#field-select {
+    width: 100%; padding: 7px 8px; border-radius: 7px; border: 1px solid var(--panel-border);
+    background: var(--control-bg); color: var(--ink); font-size: 12.5px;
+  }
+
+  .playback-row { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+  #play-btn {
+    width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--panel-border);
+    background: var(--control-bg); color: var(--ink); cursor: pointer; font-size: 14px; flex: none;
+  }
+  #play-btn:hover { background: var(--control-bg-active); }
+  #time-slider { flex: 1; accent-color: var(--accent); }
+
+  #time-readout { font-size: 11px; color: var(--muted); margin-top: 8px; }
+  #time-readout b { color: var(--ink); }
+
+  #cbar-wrap { margin-top: 14px; }
+  #cbar-gradient { height: 12px; border-radius: 6px; border: 1px solid var(--panel-border); }
+  #cbar-ticks { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--muted); margin-top: 4px; }
+  #cbar-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 4px; display: block; }
+
+  .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; margin-top: 14px; font-size: 11px; }
+  .meta-grid .k { color: var(--muted); }
+  .meta-grid .v { color: var(--ink); text-align: right; font-weight: 550; }
+
+  #hint {
+    position: fixed; right: 16px; bottom: 16px; text-align: right;
+    font-size: 10.5px; color: var(--muted); line-height: 1.6; display: flex; align-items: center; gap: 10px;
+  }
+  #hint kbd { font-family: inherit; background: var(--control-bg); border: 1px solid var(--panel-border);
+    border-radius: 4px; padding: 1px 5px; font-size: 10px; }
+  #theme-toggle { width: 28px; height: 28px; border-radius: 7px; border: 1px solid var(--panel-border);
+    background: var(--control-bg); color: var(--ink); cursor: pointer; font-size: 13px; }
+  #theme-toggle:hover { background: var(--control-bg-active); }
+
+  #panel .note {
+    margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--panel-border);
+    font-size: 10.5px; line-height: 1.5; color: var(--muted);
+  }
+  #panel .note b { color: var(--ink); }
+
+  #footer-license {
+    position: fixed; left: 0; right: 0; bottom: 6px; text-align: center;
+    font-size: 11.5px; color: var(--muted); pointer-events: none;
+  }
+  #footer-license a { color: var(--muted); pointer-events: auto; }
+  #footer-license a:hover { color: var(--accent); }
+
+  /* narrow / mobile: dock the panel at the bottom so it doesn't cover the geometry */
+  @media (max-width: 560px) {
+    #panel {
+      top: auto; left: 8px; right: 8px; bottom: 8px; width: auto;
+      max-height: 46vh; overflow-y: auto; padding: 12px 14px;
+      border-radius: 14px;
+    }
+    #panel h1 { font-size: 13px; }
+    .meta-grid { margin-top: 10px; }
+    #hint { bottom: auto; top: 10px; right: 10px; }
+    #footer-license { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div id="viewport"></div>
+
+  <div id="panel">
+    <h1>Umbilical Flow &amp; Pressure</h1>
+    <p class="sub">Simulated pressure and flow rate over one cardiac cycle, mapped onto the real UV/UA geometry. See the <a href="index.html">geometry viewer</a> for the anatomy on its own.</p>
+
+    <div class="row-label">Field</div>
+    <select id="field-select">
+      <option value="pressure">Pressure</option>
+      <option value="flow">Flow rate</option>
+    </select>
+
+    <div class="row-label">Cardiac cycle</div>
+    <div class="playback-row">
+      <button id="play-btn" aria-label="Play/pause">⏸</button>
+      <input type="range" id="time-slider" min="0" max="1000" step="1" value="0">
+    </div>
+    <div id="time-readout">t = 0 ms (0% of cycle)</div>
+
+    <div id="cbar-wrap">
+      <span id="cbar-label">Pressure</span>
+      <div id="cbar-gradient"></div>
+      <div id="cbar-ticks"><span id="cbar-min">0</span><span id="cbar-max">0</span></div>
+    </div>
+
+    <div class="meta-grid">
+      <div class="k">Gestational age</div><div class="v num" id="ga-val">25</div>
+      <div class="k">UA length</div><div class="v num"><span id="l-val">0</span> cm</div>
+      <div class="k">UV diameter</div><div class="v num"><span id="uv-diam-val">0</span> mm</div>
+      <div class="k">UA diameter</div><div class="v num"><span id="ua-diam-val">0</span> mm</div>
+    </div>
+
+    <div class="note">
+      <b>What this shows:</b> both umbilical arteries carry the same spatially-resolved 1D pulsatile
+      solution (the model treats them as a symmetric pair); the vein is a single uniform colour per
+      instant from the lumped Windkessel relation (Section II-F of the manuscript), not an
+      independently modeled, spatially distributed solve. The operating point
+      (<i>R</i><sub>total</sub>, inlet pulse amplitude) shown here is the validated production fit
+      at gestational age 25&nbsp;weeks from the manuscript's Table&nbsp;I.
+    </div>
+  </div>
+
+  <div id="hint">
+    <button id="theme-toggle" aria-label="Toggle theme">&#9788;</button>
+    <span>drag — <kbd>rotate</kbd> · <kbd>shift</kbd>/right-drag — <kbd>pan</kbd><br />scroll / pinch — <kbd>zoom</kbd></span>
+  </div>
+
+  <div id="footer-license">MIT License &mdash; <a href="https://github.com/hwe001/fetal-umbilical-circulation/blob/main/LICENSE" target="_blank" rel="noopener">github.com/hwe001/fetal-umbilical-circulation</a></div>
+
+  <script src="three.min.js"></script>
+  <script src="scene_data.js"></script>
+  <script src="flow_data.js"></script>
+  <script src="flow_app.js"></script>
+</body>
+</html>
