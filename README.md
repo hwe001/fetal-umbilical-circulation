@@ -30,7 +30,7 @@ The viewers are self-contained HTML: open the files directly, or use the live li
 
 ## Status
 
-The repository accompanies a manuscript under preparation. A Zenodo DOI will be added after acceptance. The 23-week gestation-dependent cord-length fit did not converge, so `solver/results/ga_dependent_length/GA23.json` is marked `converged: false` and is not used in the paper.
+The repository accompanies a manuscript under preparation. A Zenodo DOI will be added after acceptance. The 23-week gestation-dependent cord-length fit did not converge, so `solver/results/ga_dependent_length/GA23.json` is marked `on_target: false` (PI 1.30 vs target 1.19) and is not used in the paper.
 
 ## Licence
 
